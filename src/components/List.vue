@@ -4,11 +4,17 @@
       <p class="list-title">{{ title }}</p>
       <div class="deletelist" @click="removeList">×</div>
     </div>
+    <CardAdd :listIndex="listIndex"/>
   </div>
 </template>
 
 <script>
+import CardAdd from './CardAdd'
+
 export default {
+  components: {
+    CardAdd
+  },
   // 親コンポーネントから受け取るデータを定義する
   // propsでデータを受け取るときは、型などの条件を指定する
   props: {
